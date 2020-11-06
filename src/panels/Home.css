@@ -1,0 +1,14 @@
+.try-fortune-btn {
+    --button_primary_background: #101721;
+    font-family: sans-serif, sans-serif;
+}
+
+.Home__logo {
+    display: block;
+    width: 60vw;
+    margin: 20px auto;
+}
+
+.Home__prize-image {
+    --content_tint_background: white;
+}

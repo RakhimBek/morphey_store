@@ -1,0 +1,33 @@
+#persik {
+    --background_content: #101721;
+    --separator_common: #101721;
+    --header_text: white;
+}
+
+.Prize {
+    display: block;
+    width: 60vw;
+    margin: 20px auto;
+}
+
+.get-fortune-btn {
+    --button_primary_foreground: white;
+    --button_primary_background: #BDAD94;
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    width: 70vw;
+}
+
+.won-condition {
+    --text_primary: white;
+    text-align: center;
+    font-family: sans-serif, sans-serif;
+}
+
+.won-txt {
+    --text_primary: #BDAD94;
+    text-align: center;
+    font-family: sans-serif, sans-serif;
+    font-weight: bold;
+}
