@@ -32,3 +32,45 @@ Go to created folder and run:
 
 [deps]: https://img.shields.io/david/vkcom/create-vk-mini-app.svg
 [deps-url]: https://david-dm.org/vkcom/create-vk-mini-app
+
+
+
+Home:
+-- тут карусель. Необходимо заставить ее крутится  по нажатию на кнопку "Испытать удачу". Вращение должно быть зациклено и быстрым (желательно с плавной остановкой на некотором слоте)
+
+Слот возвращается по адресу:
+https://randee.store/api/vk/prize/random?vk_user_id=12345
+
+
+{
+    "code": 200,
+    "description": "OK.",
+    "data": {
+        "id": 3,
+        "title": "Купон -500₽ на матрас - 10%",
+        "path": "/api/attachment/3"
+    }
+}
+
+12345 - Существующии тестовый юзер
+
+
+
+https://randee.store/morphey/api/vk/prize
+
+возвращает все доступные призы:
+{
+    "code": 200,
+    "description": "OK.",
+    "data": [
+        {
+            "id": 1,
+            "title": "Купон -300 рублей на акксессуары",
+            "path": "/api/attachment/1"
+        },
+        ...
+    ]
+}
+
+
+Где: data[i].path - путь относительный https://rande.store к файлу логотипа
