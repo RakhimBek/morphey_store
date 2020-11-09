@@ -25,7 +25,7 @@ const Victory = ({id, fetchedUser, go}) => {
 	function share() {
 		bridge
 			.send("VKWebAppShowWallPostBox", {
-				"message": `Я выйграл приз от Компании Морфей @morphey_nsk`,
+				"message": `Я выйграл "${prize.title}" от Компании Морфей @morphey_nsk`,
 			})
 			.then((data) => {
 				console.log('data then');
@@ -45,7 +45,7 @@ const Victory = ({id, fetchedUser, go}) => {
 			.then(data => data.json())
 			.then(data => data.data)
 			.then(data => {
-				setPrize(path(data.path));
+				setPrize(path(data));
 			})
 			.catch(data => {
 				console.log(data);
@@ -83,7 +83,7 @@ const Victory = ({id, fetchedUser, go}) => {
 				</Cell>
 			</Group>
 			<Group separator="hide">
-				<img src={prize} className="Prize" alt="product"/>
+				<img src={path(prize.path)} className="Prize" alt="product"/>
 			</Group>
 			<Group separator="hide">
 				<Cell className="won-condition" multiline={true}>
