@@ -45,7 +45,7 @@ const Victory = ({id, fetchedUser, go}) => {
 			.then(data => data.json())
 			.then(data => data.data)
 			.then(data => {
-				setPrize(path(data));
+				setPrize(data);
 			})
 			.catch(data => {
 				console.log(data);
